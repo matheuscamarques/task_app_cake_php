@@ -2,7 +2,8 @@
 
 use Cake\Cache\Engine\FileEngine;
 use Cake\Database\Connection;
-use Cake\Database\Driver\Postgres;
+# use Cake\Database\Driver\Postgres;
+use Cake\Database\Driver\Mysql;
 use Cake\Error\ExceptionRenderer;
 use Cake\Log\Engine\FileLog;
 use Cake\Mailer\Transport\MailTransport;
@@ -261,7 +262,7 @@ return [
     'Datasources' => [
         'default' => [
             'className' => Connection::class,
-            'driver' => Postgres::class,
+            'driver' => Mysql::class,
             'persistent' => false,
             'host' => 'localhost',
             /*
